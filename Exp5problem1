@@ -1,0 +1,12 @@
+import java.util.*;
+public class CollectionAutoboxingUnboxing {
+     public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<>(); 
+        numbers.add(5);
+        numbers.add(10);
+        numbers.add(15);
+        int sum = numbers.get(0) + numbers.get(1) + numbers.get(2);
+        System.out.println("Numbers List: " + numbers);
+        System.out.println("Sum of numbers: " + sum);
+    }
+}
