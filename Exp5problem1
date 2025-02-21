@@ -1,12 +1,25 @@
 import java.util.*;
-public class CollectionAutoboxingUnboxing {
+public class NumberSumCalculator {
      public static void main(String[] args) {
-        List<Integer> numbers = new ArrayList<>(); 
-        numbers.add(5);
-        numbers.add(10);
-        numbers.add(15);
-        int sum = numbers.get(0) + numbers.get(1) + numbers.get(2);
-        System.out.println("Numbers List: " + numbers);
-        System.out.println("Sum of numbers: " + sum);
+        List<Integer> values = new ArrayList<>();
+        String[] numberStrings = {"5", "15", "25", "35", "45"};
+        for (String str : numberStrings) {
+            values.add(convertToInteger(str)); 
+        }
+        int total = computeSum(values);
+        System.out.println("Values List: " + values);
+        System.out.println("Total Sum: " + total);
     }
+    public static int convertToInteger(String str) {
+            return Integer.parseInt(str); 
+    }
+    public static int computeSum(List<Integer> values) {
+        int sum = 0;
+        for (Integer num : values) {
+            sum += num;
+        }
+        return sum;
+   }
 }
+
+        
